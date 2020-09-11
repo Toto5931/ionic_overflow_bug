@@ -1,0 +1,7 @@
+{
+  "name": "bug_overflow",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
