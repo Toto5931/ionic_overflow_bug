@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet } from '@ionic/react';
+import { IonApp, IonRouterOutlet, IonPage, IonContent, IonSlides, IonSlide, IonGrid, IonRow, IonCol } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
 
@@ -22,15 +22,26 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import './app.css';
 
 const App: React.FC = () => (
   <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route path="/home" component={Home} exact={true} />
-        <Route exact path="/" render={() => <Redirect to="/home" />} />
-      </IonRouterOutlet>
-    </IonReactRouter>
+    <IonPage>
+      <IonContent>
+        <IonSlides>
+          <IonSlide>
+            <IonGrid>
+              <IonRow>
+                <IonCol>
+                  <div className='comment'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae eius repellendus rem illo! Recusandae voluptatibus architecto accusamus earum tenetur, tempora corporis quidem natus deserunt, ipsa voluptatum quisquam, quo beatae doloribus?</div>
+
+                </IonCol>
+              </IonRow>
+            </IonGrid>
+          </IonSlide>
+        </IonSlides>
+      </IonContent>
+    </IonPage>
   </IonApp>
 );
 
